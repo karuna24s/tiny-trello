@@ -1,4 +1,4 @@
-<a class="item-show" href="#">
+<a class="todo-item" href="#">
   {{#if isEditingTitle}}
     <form {{action 'toggleEditingTitle' on="submit"}}>
       {{input type="text" placeholder=item.title value=item.title focus-out="toggleEditingTitle"}}

@@ -1,19 +1,29 @@
 <li class="list">
   {{#if isEditingTitle}}
     <form {{action 'toggleEditingTitle' on="submit"}}>
-      {{input type="text" placeholder=list.name value=list.name focus-out="toggleEditingTitle"}}
+      {{input type="text" placeholder=list.title value=list.title focus-out="toggleEditingTitle"}}
       <button type="submit">Save</button>
     </form>
   {{else}}
-    <h3><button {{action "toggleEditingTitle"}}>{{list.name}}</button></h3>
+    <h3><button {{action "toggleEditingTitle"}}>{{list.title}}</button></h3>
   {{/if}}
 
   <ul class="list-items">
     {{#each list.items as |item| }}
       {{todo-item item=item}}
     {{/each}}
+
     <li class="add-item">
-      <button class="add-item-button" {{action 'addNewItem'}}>Add New Item!</button>
+      {{#if addingItem}}
+        <form {{action 'createNewItem' on="submit"}}>
+          {{input value=value
+            key-press=(action 'createNewItem')
+            placeholder="New Item Title"}}
+            <button type="submit">Add</button>
+        </form>
+      {{else}}
+        <button class="add-item-button" {{action "toggleAddingItem"}}>Add New Item!</button>
+      {{/if}}
     </li>
   </ul>
 </li>
