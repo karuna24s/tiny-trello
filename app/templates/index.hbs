@@ -2,12 +2,5 @@
   <div class="right tomster"></div>
     <h2>Lists</h2>
     <p>This is where I will display my lists and their items!</p>
-    <ul class="lists">
-      {{#each model as |list|}}
-        {{todo-list list=list}}
-      {{/each}}
-      <li class="create-list">
-        <h3><a class="create-list-link" href="#">Create New List</a></h3>
-      </li>
-    </ul>
+    <div class='board'>{{board-show lists=model}}</div>
 </div>

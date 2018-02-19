@@ -1,11 +1,9 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  isEditingTitle: false,
-
   actions: {
-    toggleEditingTitle() {
-      this.toggleProperty('isEditingTitle');
+    addNewList() {
+      this.get('lists').push({ title: "New List" });
       this.rerender();
     }
   }

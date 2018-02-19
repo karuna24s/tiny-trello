@@ -1,3 +1,10 @@
 <a class="item-show" href="#">
-  {{item.title}}
+  {{#if isEditingTitle}}
+    <form {{action 'toggleEditingTitle' on="submit"}}>
+      {{input type="text" placeholder=item.title value=item.title focus-out="toggleEditingTitle"}}
+      <button type="submit">Save</button>
+    </form>
+  {{else}}
+    <h3><button {{action "toggleEditingTitle"}}>{{item.title}}</button></h3>
+  {{/if}}
 </a>
