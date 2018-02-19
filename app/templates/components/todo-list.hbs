@@ -1,1 +1,12 @@
-{{yield}}
+<li class="list">
+  <h3>{{list.name}}</h3>
+
+  <ul class="list-items">
+    {{#each list.items as |item| }}
+      {{todo-item item=item}}
+    {{/each}}
+    <li class="add-item">
+      <a class="add-new-list" href="#" {{action 'addNewItem'}}>Add New Item</a>
+    </li>
+  </ul>
+</li>
