@@ -1,10 +1,6 @@
-<a class="todo-item" href="#">
-  {{#if isEditingTitle}}
-    <form {{action 'toggleEditingTitle' on="submit"}}>
-      {{input type="text" placeholder=item.title value=item.title focus-out="toggleEditingTitle"}}
-      <button type="submit">Save</button>
-    </form>
-  {{else}}
-    <h3><button {{action "toggleEditingTitle"}}>{{item.title}}</button></h3>
-  {{/if}}
+<a class='item-show' href='#' {{action 'openModal'}}>
+  <div class='item-title'>{{item.title}}</div>
 </a>
+
+{{modal-component item=item list=list modalOpen=modalOpen
+  }}

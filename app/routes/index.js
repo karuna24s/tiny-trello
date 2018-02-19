@@ -8,7 +8,7 @@ export default Route.extend({
         items: [
           { id: 1,
             title: 'Item Title 1',
-            description: 'Description of first item here'
+            description: 'Hire Karuna'
           },
           { id: 2,
             title: 'Item Title 2',
