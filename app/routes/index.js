@@ -4,7 +4,7 @@ export default Route.extend({
   model() {
     return [
       { id: 1,
-        title: 'Default List',
+        name: 'Default List',
         items: [
           { id: 1,
             title: 'Item Title 1',

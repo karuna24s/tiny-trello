@@ -2,7 +2,6 @@
   {{#each lists as |listItem|}}
     {{todo-list list=listItem items=list.items}}
   {{/each}}
-  <li class="create-list">
-    <h3><button class="create-list-button" action={{addNewList}} lists={{lists}}>Create New List</button></h3>
-  </li>
+
+  {{create-list onAdd=(action 'addNewList')}}
 </ul>

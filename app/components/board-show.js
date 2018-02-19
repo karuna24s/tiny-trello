@@ -3,7 +3,7 @@ import Component from '@ember/component';
 export default Component.extend({
   actions: {
     addNewList() {
-      this.get('lists').push({ title: "New List" });
+      this.get('lists').pushObject({ name: "New List", items: [] });
       this.rerender();
     }
   }

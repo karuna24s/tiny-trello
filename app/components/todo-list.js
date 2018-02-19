@@ -2,12 +2,17 @@ import Component from '@ember/component';
 
 export default Component.extend({
   isEditingTitle: false,
-  addingItem: false,
+  isAddingItem: false,
 
   actions: {
-
-    addNewItem() {
-      this.get("list.items").push({ list_id: this.get('list').id, title: "New Item", description: "Item's Description" });
+    addNewItem(text) {
+      if (this.get('list.items').length < 1) {
+        this.get('list.items').pushObject({id: 1, title: text, description: 'add description here'});
+      } else {
+        const itemId = this.get('list.items').get('lastObject').id + 1;
+        this.get('list.items').pushObject({id: itemId, title: text, description: 'add description here'});
+      }
+      this.toggleProperty('isAddingItem');
       this.rerender();
     },
 
@@ -17,7 +22,7 @@ export default Component.extend({
     },
 
     toggleAddingItem() {
-      this.toggleProperty('addingItem');
+      this.toggleProperty('isAddingItem');
       this.rerender();
     }
   }
