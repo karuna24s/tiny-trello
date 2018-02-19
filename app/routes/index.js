@@ -4,7 +4,10 @@ export default Route.extend({
   model() {
     return [
       { title: 'Default List',
-        items: []
+        items: [{
+          title: 'Item Title 1',
+          description: 'Hire Karuna'
+        }]
       }
     ];
   }
