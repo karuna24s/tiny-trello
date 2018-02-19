@@ -15,12 +15,16 @@ export default Component.extend({
       this.toggleProperty('isAddingItem');
       this.rerender();
     },
-
+    deleteItem(id) {
+      const itemIndex = this.get('list.items').findIndex(item => item.id === id);
+      const item = this.get('list.items').objectAt(itemIndex);
+      this.get('list.items').removeObject(item);
+      this.rerender();
+    },
     toggleEditingTitle() {
       this.toggleProperty('isEditingTitle');
       this.rerender();
     },
-
     toggleAddingItem() {
       this.toggleProperty('isAddingItem');
       this.rerender();

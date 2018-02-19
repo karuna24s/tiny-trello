@@ -8,11 +8,9 @@ export default Component.extend({
       const title = this.get('text');
       this.get('onAdd')(title);
     },
-
     toggleAddingItem() {
       this.toggleProperty('isAddingItem');
       this.rerender();
     }
-
   }
 });

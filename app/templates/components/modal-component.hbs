@@ -12,9 +12,9 @@
           <div>Description:</div>
           {{input type="text" placeholder=item.description value=item.description rows=5}}
         </label>
-        <button class="modal-submit-button" {{action "submitForm"}}>Save</button>
+        <button class='modal-submit-button' {{action "submitForm"}}>Save</button>
       </form>
-      <button class="modal-delete-item" name="delete" {{action "openConfirm"}}>Delete</button>
+      <button class="modal-delete-item" name="delete" {{action 'deleteConfirm'}}>Delete</button>
       <button type="button" class="close-modal" {{action 'closeModal'}}>close</button>
     </div>
   </div>

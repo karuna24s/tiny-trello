@@ -10,6 +10,13 @@ export default Component.extend({
     openModal() {
       this.set('modalOpen', true);
     },
+    deleteConfirm() {
+      const confirmed = confirm('Are you sure you want to delete this item?');
+      if (confirmed) {
+        this.get('onConfirm')();
+        this.send('closeModal');
+      }
+    },
     submitForm() {
       event.preventDefault();
       this.get('onSubmit')([this.get('title'), this.get('description')]);

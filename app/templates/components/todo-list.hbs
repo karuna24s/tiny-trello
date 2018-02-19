@@ -10,7 +10,7 @@
 
   <ul class="list-items">
     {{#each list.items as |item| }}
-      {{todo-item item=item}}
+      {{todo-item item=item onDelete=(action 'deleteItem')}}
     {{/each}}
     <li class="add-item">
       {{#if isAddingItem}}
