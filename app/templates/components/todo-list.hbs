@@ -5,8 +5,6 @@
     {{#each list.items as |item| }}
       {{todo-item item=item}}
     {{/each}}
-    <li class="add-item">
-      <a class="add-new-list" href="#" {{action 'addNewItem'}}>Add New Item</a>
-    </li>
+    <a class="add-card-link" href="#" {{action 'addNewItem'}}>Add New Item</a>
   </ul>
 </li>

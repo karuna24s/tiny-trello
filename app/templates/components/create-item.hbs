@@ -1,1 +1,6 @@
-{{yield}}
+<div class="item-placeholder-text">
+  {{input value=value
+        key-up=(action 'createNewItem')
+        placeholder="New Item Title"}}
+  {{yield results}}
+</div>
