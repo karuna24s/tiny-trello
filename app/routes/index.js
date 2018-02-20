@@ -12,7 +12,7 @@ export default Route.extend({
           },
           { id: 2,
             title: 'Another Important Task',
-            description: 'Description of that task can updated here.'
+            description: 'Description of that task can be updated here.'
           },
         ]
       }
