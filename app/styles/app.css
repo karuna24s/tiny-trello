@@ -27,13 +27,17 @@ body {
   letter-spacing: -1.2px;
 }
 
+/* Header */
+
 .header {
   text-align: center;
-  background: #D5DFE3;
+  background: #07E09A;
   padding-top: 5px;
-  padding-bottom: 5px;
-  margin-bottom: 25px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
+
+/* Lists */
 
 .lists {
   display: flex;
@@ -49,7 +53,7 @@ body {
   padding: 50px;
   background: #D5DFE3;
   border-radius: 5px;
-  width: 275px;
+  width: 200px;
   box-shadow: 10px 10px 5px #888888;
 }
 
@@ -79,6 +83,10 @@ body {
   padding-bottom: 10px;
 }
 
+.list-title:hover {
+  color: #2B63FE;
+}
+
 .list-items {
   margin-top: 20px;
 }
@@ -98,4 +106,58 @@ body {
 
 .item-title:hover {
   background: #E9E8E8;
+}
+
+/* Add an item */
+
+.create-item {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.create-item:hover {
+  color: #2B63FE;
+}
+
+.create-item-title > input {
+  min-height: 30px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding: 5px;
+}
+
+.create-item-form {
+  background: white;
+  border-radius: 5px;
+}
+
+.create-item-title > input {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Add a list */
+
+.create-list-button {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.create-list-button:hover {
+  cursor: pointer;
+  color: #2B63FE;
+}
+
+.create-list {
+  width: 200px;
+  padding: 50px;
+  text-align: center;
 }

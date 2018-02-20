@@ -1,6 +1,7 @@
-<div>
-  <form {{action 'createItem' on="submit"}}>
-    {{input type="text" placeholder='Add Title' value=text focus-out="toggleAddingItem"}}
-    <button {{action 'createItem'}}>Add</button>
+<div class='create-item-wrapper'>
+  <form class='create-item-form'{{action 'createItem' on='submit'}}>
+    <label class='create-item-title'>
+      {{input type='text' placeholder='Add Title' value=text focus-out='toggleAddingItem'}}
+    </label>
   </form>
 </div>

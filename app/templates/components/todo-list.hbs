@@ -15,11 +15,11 @@
       {{#each list.items as |item| }}
         {{todo-item item=item onDelete=(action 'deleteItem')}}
       {{/each}}
-      <li class="add-item">
+      <li class="create-item">
         {{#if isAddingItem}}
           {{create-item onAdd=(action 'addNewItem')}}
         {{else}}
-          <a class="add-item" href="#" {{action "toggleAddingItem"}}>Add New Item!</a>
+          <a class="create-item" href="#" {{action "toggleAddingItem"}}>Add New Item!</a>
         {{/if}}
       </li>
     </ul>
