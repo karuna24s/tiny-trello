@@ -16,7 +16,6 @@ html, body, button, h2, input, ul, input, link, li, a, button {
 body {
   font-family: 'Helvetica Neue';
   background: lightgray;
-  color: black;
   font-size: 20px;
   height: 100%;
   bottom: 0;
@@ -59,14 +58,12 @@ body {
 
 .list-title {
   font-size: 24px;
-  color: #333;
   font-weight: bold;
   text-align: center;
   padding-bottom: 10px;
 }
 
 .list-title-edit-button {
-  color: #333;
   font-weight: bold;
   font-size: 16px;
   margin-right: 50px;
@@ -78,7 +75,6 @@ body {
 
 .list-title-edit input {
   font-size: 24px;
-  color: #333;
   font-weight: bold;
   padding-bottom: 10px;
 }
@@ -95,7 +91,6 @@ body {
 
 .item-title{
   min-height: 16px;
-  color: #333;
   font-size: 16px;
   font-weight: 500;
   margin-top: 20px;
@@ -114,7 +109,6 @@ body {
   margin-top: 20px;
   font-size: 16px;
   font-weight: 500;
-  color: #333;
 }
 
 .create-item:hover {
@@ -124,7 +118,6 @@ body {
 .create-item-title > input {
   min-height: 30px;
   font-size: 16px;
-  color: #333;
   font-weight: bold;
   padding-bottom: 10px;
   padding: 5px;
@@ -138,14 +131,12 @@ body {
 .create-item-title > input {
   font-size: 16px;
   font-weight: 500;
-  color: #333;
 }
 
 /* Add a list */
 
 .create-list-button {
   font-size: 24px;
-  color: #333;
   font-weight: bold;
   text-align: center;
   padding-bottom: 10px;
