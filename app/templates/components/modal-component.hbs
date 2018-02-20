@@ -1,20 +1,20 @@
 {{#if modalOpen}}
-  <div class="modal fade">
-    <div class="modal-outer" {{action 'closeModal'}}></div>
-    <div class="modal-content">
+  <div class='modal fade'>
+    <div class='modal-outer' {{action 'closeModal'}}></div>
+    <div class='modal-content'>
       <form class='modal-form' method='post'>
         <label class='modal-form-title'>
           <div>Title:</div>
-          {{input type="text" placeholder=item.title value=item.title}}
+          {{input type='text' placeholder=item.title value=item.title}}
         </label>
         <label class='modal-form-description'>
           <div>Description:</div>
-          {{input type="text" placeholder=item.description value=item.description rows=5}}
+          {{input type='text' placeholder=item.description value=item.description rows=5}}
         </label>
         <div class='modal-buttons'>
-          <button type="button" class="close-modal" {{action 'closeModal'}}>Close</button>
-          <button class='modal-submit-button' {{action "submitForm"}}>Save</button>
-          <button class="modal-delete-item" name="delete" {{action 'deleteConfirm'}}>Delete</button>
+          <button type='button' class='modal-close-button' {{action 'closeModal'}}>Close</button>
+          <button class='modal-submit-button' {{action 'submitForm'}}>Save</button>
+          <button class='modal-delete-button' {{action 'deleteConfirm'}}>Delete</button>
         </div>
       </form>
     </div>
