@@ -1,23 +1,27 @@
-<li class="list">
-  {{#if isEditingTitle}}
-    <form {{action 'toggleEditingTitle' on="submit"}}>
-      {{input type="text" placeholder=list.name value=list.name focus-out="toggleEditingTitle"}}
-      <button type="submit">Save</button>
-    </form>
-  {{else}}
-    <h3><button {{action "toggleEditingTitle"}}>{{list.name}}</button></h3>
-  {{/if}}
+<li class="list-wrapper">
+  <div class="list">
+    {{#if isEditingTitle}}
+      <form class='list-title-edit-wrapper' {{action 'toggleEditingTitle' on="submit"}}>
+        <label class='list-title-edit'>
+          {{input type="text" placeholder=list.name value=list.name focus-out="toggleEditingTitle"}}
+          <button class='list-title-edit-button' type="submit">Save</button>
+        </label>
+      </form>
+    {{else}}
+      <a class='list-title' href='#' {{action "toggleEditingTitle"}}>{{list.name}}</a>
+    {{/if}}
 
-  <ul class="list-items">
-    {{#each list.items as |item| }}
-      {{todo-item item=item onDelete=(action 'deleteItem')}}
-    {{/each}}
-    <li class="add-item">
-      {{#if isAddingItem}}
-        {{create-item onAdd=(action 'addNewItem')}}
-      {{else}}
-        <button class="create-item-button" {{action "toggleAddingItem"}}>Add New Item!</button>
-      {{/if}}
-    </li>
-  </ul>
+    <ul class="list-items">
+      {{#each list.items as |item| }}
+        {{todo-item item=item onDelete=(action 'deleteItem')}}
+      {{/each}}
+      <li class="add-item">
+        {{#if isAddingItem}}
+          {{create-item onAdd=(action 'addNewItem')}}
+        {{else}}
+          <a class="add-item" href="#" {{action "toggleAddingItem"}}>Add New Item!</a>
+        {{/if}}
+      </li>
+    </ul>
+  </div>
 </li>

@@ -1,0 +1,101 @@
+html, body, button, h2, input, ul, input, link, li, a, button {
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  list-style: none;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent;
+  outline: none
+}
+
+
+
+body {
+  font-family: 'Helvetica Neue';
+  background: lightgray;
+  color: black;
+  font-size: 20px;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0;
+  letter-spacing: -1.2px;
+}
+
+.header {
+  text-align: center;
+  background: #D5DFE3;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+}
+
+.lists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.list-wrapper {
+  margin: 50px;
+}
+
+.list {
+  padding: 50px;
+  background: #D5DFE3;
+  border-radius: 5px;
+  width: 275px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.list-title {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.list-title-edit-button {
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 50px;
+}
+
+.list-title-edit-button:hover {
+  cursor: pointer;
+}
+
+.list-title-edit input {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.list-items {
+  margin-top: 20px;
+}
+
+/* Items */
+
+.item-title{
+  min-height: 16px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  padding: 5px;
+  background: white;
+  border-radius: 5px;
+}
+
+.item-title:hover {
+  background: #E9E8E8;
+}
