@@ -16,11 +16,6 @@ export default Component.extend({
         this.get('onConfirm')();
         this.send('closeModal');
       }
-    },
-    submitForm() {
-      event.preventDefault();
-      this.get('onSubmit')([this.get('title'), this.get('description')]);
-      this.send('closeModal');
     }
   }
 });

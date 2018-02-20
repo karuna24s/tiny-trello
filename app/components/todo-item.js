@@ -15,9 +15,6 @@ export default Component.extend({
     deleteItem() {
       const id = this.get('item.id');
       this.get('onDelete')(id);
-    },
-    itemSubmit() {
-      this.get();
-    },
+    }
   }
 });
