@@ -161,3 +161,90 @@ body {
   padding: 50px;
   text-align: center;
 }
+
+/* Modal */
+
+.modal-outer {
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  z-index: 20;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin-top: 200px;
+  margin-left: 33%;
+  margin-right: 33%;
+  position: absolute;
+  background: white;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form {
+  margin: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.modal-form-title {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border-top: 1px solid #efefef;
+}
+
+.modal-form-title > div {
+  padding-right: 110px;
+}
+
+.modal-form input {
+  background: lightgray;
+  padding: 10px;
+  min-width: 250px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.modal-form-description {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border-top: 1px solid #efefef;
+}
+
+.modal-form-description > div {
+  padding-right: 35px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 1px solid #efefef;
+}
+
+.modal-buttons > button {
+  font-size: 16px;
+}
+
+.modal-buttons > button:hover {
+  cursor: pointer;
+  color: #2B63FE;
+  font-weight: bold;
+}

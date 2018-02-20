@@ -7,12 +7,12 @@ export default Route.extend({
         name: 'Default List',
         items: [
           { id: 1,
-            title: 'Item Title 1',
-            description: 'Hire Karuna'
+            title: 'Important Task',
+            description: 'Hire Karuna.'
           },
           { id: 2,
-            title: 'Item Title 2',
-            description: 'Description of second item here'
+            title: 'Another Important Task',
+            description: 'Description of that task can updated here.'
           },
         ]
       }

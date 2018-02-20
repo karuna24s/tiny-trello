@@ -10,4 +10,4 @@
 [x] set up two models [item (title, description), list (name)]
 [x] building the modal component
 [x] need to implement a feature to confirm if you would like to delete an item
-[] implementing css for styling each of templates
+[x] implementing css for styling each of templates

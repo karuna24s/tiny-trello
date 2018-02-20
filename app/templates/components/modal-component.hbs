@@ -2,7 +2,6 @@
   <div class="modal fade">
     <div class="modal-outer" {{action 'closeModal'}}></div>
     <div class="modal-content">
-
       <form class='modal-form' method='post'>
         <label class='modal-form-title'>
           <div>Title:</div>
@@ -12,10 +11,12 @@
           <div>Description:</div>
           {{input type="text" placeholder=item.description value=item.description rows=5}}
         </label>
-        <button class='modal-submit-button' {{action "submitForm"}}>Save</button>
+        <div class='modal-buttons'>
+          <button type="button" class="close-modal" {{action 'closeModal'}}>Close</button>
+          <button class='modal-submit-button' {{action "submitForm"}}>Save</button>
+          <button class="modal-delete-item" name="delete" {{action 'deleteConfirm'}}>Delete</button>
+        </div>
       </form>
-      <button class="modal-delete-item" name="delete" {{action 'deleteConfirm'}}>Delete</button>
-      <button type="button" class="close-modal" {{action 'closeModal'}}>close</button>
     </div>
   </div>
 {{/if}}
